@@ -2,9 +2,8 @@ require "formula"
 
 class Kalendas < Formula
   homepage "https://github.com/mikemolina/kalendas"
-  url "https://launchpad.net/kalendas/trunk/1.0.1/+download/kalendas-1.0.1.tar.gz"
-  sha1 "f3d54eadadba21a238a6ede7a7830e8d797b0937"
-
+  url "https://launchpad.net/kalendas/trunk/1.0.2/+download/kalendas-1.0.2.tar.gz"
+  sha1 "3f714dea45621d795eebf0c8253d28c8dd6e6582"
   head do
     url "https://github.com/mikemolina/kalendas.git"
     depends_on "autoconf" => :build
