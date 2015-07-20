@@ -1,9 +1,10 @@
 require "formula"
 
 class Kalendas < Formula
-  homepage "https://github.com/mikemolina/kalendas"
-  url "https://launchpad.net/kalendas/trunk/1.1.0/+download/kalendas-1.1.0.tar.gz"
-  sha1 "429911170d8ce73fbfddc690b1aed323b16fc640"
+  homepage "https://mikemolina.github.io/kalendas-home"
+  url "https://launchpad.net/kalendas/trunk/1.2.0/+download/kalendas-1.2.0.tar.gz"
+  sha256 "6f665e7ce1bda7ca5e063b69b8d313583791d95f636181b6ed9131e71fb5c304"
+
   head do
     url "https://github.com/mikemolina/kalendas.git"
     depends_on "autoconf" => :build
@@ -25,6 +26,7 @@ class Kalendas < Formula
       --disable-dependency-tracking
       --disable-silent-rules
       --prefix=#{prefix}
+      --with-bash-completion==#{etc}/bash_completion.d
     ]
 
     args << "--enable-charset=latin1" if build.include? "enable-charset-latin1"
@@ -32,6 +34,17 @@ class Kalendas < Formula
     system "./configure", *args
     system "make"
     system "make", "install"
+
+    bash_completion.install "extra/kalendas-bash-completion.sh" => "kalendas-bash-completion.sh"
+  end
+
+  def caveats; <<-EOS.undent
+    Add the following lines to your ~/.bash_profile or ~/.bashrc:
+    # Bash completion for kalendas
+    if [ -d $(brew --prefix)/etc/bash_completion.d ]; then
+       . $(brew --prefix)/etc/bash_completion.d/kalendas-bash-completion.sh
+    fi
+    EOS
   end
 
   test do
