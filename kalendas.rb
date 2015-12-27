@@ -2,8 +2,8 @@ require "formula"
 
 class Kalendas < Formula
   homepage "https://mikemolina.github.io/kalendas-home"
-  url "https://launchpad.net/kalendas/trunk/1.2.0/+download/kalendas-1.2.0.tar.gz"
-  sha256 "6f665e7ce1bda7ca5e063b69b8d313583791d95f636181b6ed9131e71fb5c304"
+  url "https://launchpad.net/kalendas/trunk/1.3.0/+download/kalendas-1.3.0.tar.gz"
+  sha256 "eb6f8b3ef4cfe86df461a3899a3a0d6393d487e425e0a010187ef1a7dc46fa32"
 
   head do
     url "https://github.com/mikemolina/kalendas.git"
