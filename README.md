@@ -13,8 +13,9 @@ Verify the installation
 You can also install the version under development
 
     $ brew install --HEAD kalendas
-This option requires the dependencies autoconf, automake, gettext and texinfo.
-To build the program with latin characters use the option '--enable-charset-latin1'.
+This option requires the dependencies autoconf, automake, gettext, texinfo and
+optionaly LaTeX and pkg-config. To build the program with latin characters use
+the option '--enable-charset-latin1'.
 
 Uninstall
 ---------
