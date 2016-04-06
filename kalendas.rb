@@ -1,6 +1,5 @@
-require "formula"
-
 class Kalendas < Formula
+  desc "Calculations of Calendar and Julian Date"
   homepage "https://mikemolina.github.io/kalendas-home"
   url "https://launchpad.net/kalendas/trunk/1.3.0/+download/kalendas-1.3.0.tar.gz"
   sha256 "eb6f8b3ef4cfe86df461a3899a3a0d6393d487e425e0a010187ef1a7dc46fa32"
@@ -13,11 +12,11 @@ class Kalendas < Formula
     depends_on "texinfo" => :build
   end
 
-  option "enable-charset-latin1", "Build with charset latin1"
+  option "with-charset-latin1", "Build with charset latin1"
 
   depends_on "Locale::TextDomain" => :perl
-  depends_on "gettext" if build.include? "enable-charset-latin1"
-  depends_on "texinfo" if build.include? "enable-charset-latin1"
+  depends_on "gettext" if build.include? "charset-latin1"
+  depends_on "texinfo" if build.include? "charset-latin1"
 
   def install
     system "./autogen.sh" if build.head?
@@ -29,7 +28,7 @@ class Kalendas < Formula
       --with-bash-completion==#{etc}/bash_completion.d
     ]
 
-    args << "--enable-charset=latin1" if build.include? "enable-charset-latin1"
+    args << "--enable-charset=latin1" if build.include? "charset-latin1"
 
     system "./configure", *args
     system "make"
