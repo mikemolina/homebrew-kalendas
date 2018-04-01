@@ -14,7 +14,7 @@ class Kalendas < Formula
 
   option "with-charset-latin1", "Build with charset latin1"
 
-  depends_on "Locale::TextDomain" => :perl
+  depends_on "perl"
   depends_on "gettext" if build.include? "charset-latin1"
   depends_on "texinfo" if build.include? "charset-latin1"
 
@@ -37,7 +37,7 @@ class Kalendas < Formula
     bash_completion.install "extra/kalendas-bash-completion.sh" => "kalendas-bash-completion.sh"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Add the following lines to your ~/.bash_profile or ~/.bashrc:
     # Bash completion for kalendas
     if [ -d $(brew --prefix)/etc/bash_completion.d ]; then
