@@ -1,7 +1,7 @@
 Install kalendas with Homebrew
 ==============================
 
-For install **kalendas** with [Homebrew](http://brew.sh/) or [Linuxbrew](http://brew.sh/linuxbrew/) add the repository
+For install **kalendas** with [Homebrew](http://brew.sh/) or [Linuxbrew](http://linuxbrew.sh/) add the repository
 
     $ brew tap mikemolina/kalendas
 and then
