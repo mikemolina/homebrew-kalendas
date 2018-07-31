@@ -1,8 +1,8 @@
 class Kalendas < Formula
   desc "Calculations of Calendar and Julian Date"
   homepage "https://mikemolina.github.io/kalendas-home"
-  url "https://launchpad.net/kalendas/trunk/1.3.0/+download/kalendas-1.3.0.tar.gz"
-  sha256 "eb6f8b3ef4cfe86df461a3899a3a0d6393d487e425e0a010187ef1a7dc46fa32"
+  url "https://launchpad.net/kalendas/trunk/1.3.1/+download/kalendas-1.3.1.tar.gz"
+  sha256 "48c71123cdafa5637ec0bb35880c1459ff899049b7afb9e2ea5353eae07c2a38"
 
   head do
     url "https://github.com/mikemolina/kalendas.git"
